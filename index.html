@@ -2373,8 +2373,8 @@ function minimizeWindow(id) {
   autoSave();
 }
 function closeAllWindows() {
-  // Keep these core windows open
-  const keep = new Set(['main-win', 'stats-win', 'mail-win']);
+  // Keep only the main game window open
+  const keep = new Set(['main-win']);
   document.querySelectorAll('.win95').forEach(w => {
     if (!keep.has(w.id) && w.style.display !== 'none') {
       w.style.display = 'none';
@@ -2382,7 +2382,7 @@ function closeAllWindows() {
     }
   });
   updateTaskbar();
-  showNotif('✕ All extra windows closed.');
+  showNotif('✕ All windows closed.');
 }
 function bringToFront(el) {
   windowZBase++;
@@ -5130,8 +5130,6 @@ function startNewGeneration(inherited) {
   generateLetter();
   renderAll();
   openWindow('main-win');
-  openWindow('stats-win');
-  openWindow('legacy-win');
   updateTaskbar();
   showNotif(`👑 ${msg}`);
   if (inherited.shadowPressure) {
@@ -5260,6 +5258,8 @@ function restartGame() {
   generateLetter();
   generateLetter();
   renderAll();
+  openWindow('main-win');
+  updateTaskbar();
   showNotif('💌 New reign begins. Make us proud, Vivienne.');
 }
 
@@ -7914,8 +7914,6 @@ window.addEventListener('DOMContentLoaded', () => {
           restoreWindowUIState(ui);
         } else {
           openWindow('main-win');
-          openWindow('stats-win');
-          openWindow('mail-win');
         }
         updateTaskbar();
         showNotif(`💄 Save restored. Welcome back, ${G.name}.`);
@@ -7926,8 +7924,6 @@ window.addEventListener('DOMContentLoaded', () => {
     generateLetter();
     generateLetter();
     openWindow('main-win');
-    openWindow('stats-win');
-    openWindow('mail-win');
     updateTaskbar();
     showNotif(`💌 Welcome to Pink Reign, ${G.name}. Virality. Obsession. Personality Drift.`);
   }, 50);
