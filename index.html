@@ -2054,6 +2054,87 @@ const LETTERS = [
   { from:'Anonymous', subject:'She reinvented. You should panic.', body:"I don't know if you saw, but she's different now. New look. New friends. She was at three events you weren't invited to. Whatever you did to her made her better. You might want to take that seriously.", effects:{ instability:4, ambition:3 }, icon:'🦋', category:'hate' },
   { from:'Campus Gossip Column', subject:'The Couple Brand Rankings', body:"This week's top: the mysterious power couple (you know who), followed by the tragic romance everyone is waiting to combust. You're either at the top of this list or you're not in the conversation. There is no middle.", effects:{ popularity:3, fame:2 }, icon:'💘', category:'fan' },
   { from:'Queen Bee Challenger', subject:'I heard you asked about me', body:"Word travels. You were asking about my weaknesses. I find it flattering. I also find it strategic. Let's see if you can match the preparation you apparently have. Come find me if you're serious.", effects:{ influence:3, instability:3 }, icon:'👑', category:'general' },
+
+  // ===== LETTERS FOR NEW BOYS =====
+  { from:'Nico (F1 Driver)', subject:'Dubai next weekend', body:"I have a race qualifier Friday. I want you in the paddock. My team thinks you\'re good luck. I think you\'re just good. Ticket is waiting at the hotel front desk.", effects:{ wealth:5, popularity:4, scandal:2 }, icon:'🏎', category:'bf', bfRequired:'f1driver' },
+  { from:'Nico (F1 Driver)', subject:'I crash when I think about you', body:"My lap times are down 0.4 seconds this week. Coach is furious. It\'s your fault specifically. I'm not complaining. Just reporting the data.", effects:{ popularity:3, instability:2, obsession:3 }, icon:'🏎', category:'bf', bfRequired:'f1driver' },
+  { from:'Nico (F1 Driver)', subject:'The Monaco tabloids', body:"I need you to not read what\'s printed in the Monaco tabloids this week. Or read them. It\'s not what it looks like. Or it\'s exactly what it looks like but the context is different. Can we talk?", effects:{ scandal:5, instability:4 }, icon:'📰', category:'bf', bfRequired:'f1driver' },
+  { from:'Eli (Med Student)', subject:'Sorry I missed your call', body:"I was in a 14-hour anatomy lab. My phone died at hour 6. I think about you every time I take a 7-minute break, which happens twice per 14 hours. I\'m calculating whether this is sustainable.", effects:{ intelligence:3, purity:2, instability:1 }, icon:'🩺', category:'bf', bfRequired:'medstudent' },
+  { from:'Eli (Med Student)', subject:'You make the data make sense', body:"I gave a seminar on behavioral economics today and I kept thinking of you as my anchor example. The professor asked why I kept smiling. I said it was caffeine. I\'ve had zero caffeine in four days.", effects:{ intelligence:4, obsession:2 }, icon:'📊', category:'bf', bfRequired:'medstudent' },
+  { from:'Kai (E-Boy Streamer)', subject:'chat wants to meet you', body:"I may have accidentally mentioned you on stream. 40k viewers. They clipped it. It's trending on platform. The clip is called \'kai has a girlfriend moment\' and I am experiencing consequences.", effects:{ popularity:6, scandal:3, obsession:4 }, icon:'🎮', category:'bf', bfRequired:'eboy' },
+  { from:'Kai (E-Boy Streamer)', subject:'the superchats are asking', body:"Okay so chat sent $3,000 combined in superchats asking who you are and I have a policy of never confirming. But they found your campus profile. I\'m so sorry. They\'re going to be obsessed with you.", effects:{ popularity:5, obsession:5, scandal:4 }, icon:'📱', category:'bf', bfRequired:'eboy' },
+  { from:'Ethan (Church Boy)', subject:'I\'ve been praying about you', body:"I brought you up in my morning devotional three times this week. Pastor noticed and asked. I told him you were a friend. He asked what kind. I said the kind that makes you reconsider every vow you\'ve ever made. He\'s concerned.", effects:{ purity:4, instability:3, obsession:2 }, icon:'✝', category:'bf', bfRequired:'churchboy' },
+  { from:'Ethan (Church Boy)', subject:'They found the photos', body:"The youth group found the photos from the Elise party. I told them it was a misunderstanding. My mother called. She cried. I need to see you in person and I need you to understand that I chose this.", effects:{ scandal:5, instability:5, purity:-4, obsession:3 }, icon:'📸', category:'bf', bfRequired:'churchboy' },
+  { from:'Riku (Exchange Student)', subject:'Something confused me', body:"Today someone said I was \'whipped\'. I looked it up. The translation I found seemed insulting. My friend said it\'s actually not. Is this accurate? I would like a comprehensive explanation. Over dinner.", effects:{ beauty:2, obsession:2, popularity:1 }, icon:'🌸', category:'bf', bfRequired:'exchange' },
+  { from:'Riku (Exchange Student)', subject:'I wrote a poem in Japanese', body:"I wrote you a poem. In Japanese. I won\'t translate it because some feelings work better without translation. I\'ll read it to you if you ask. You have to ask in Japanese. I\'ll teach you.", effects:{ beauty:3, influence:2, obsession:3 }, icon:'🌸', category:'bf', bfRequired:'exchange' },
+  { from:'Florian (Nepo Baby)', subject:'The Valentino show', body:"I got two seats at the Valentino couture show in Paris this weekend. My father\'s PA arranged it. I mentioned you by name. They know who you are. Everyone does, apparently. Come.", effects:{ elegance:6, wealth:4, popularity:4 }, icon:'🕶', category:'bf', bfRequired:'nepobaby' },
+  { from:'Florian (Nepo Baby)', subject:'My mother called you stunning', body:"She never says that. She once described a Basquiat as \'acceptable.\' You should feel flattered. You should also know she is informing everyone in her contact list about you. I can\'t stop this. I wouldn\'t want to.", effects:{ elegance:4, wealth:3, familyControl:3 }, icon:'🕶', category:'bf', bfRequired:'nepobaby' },
+  { from:'Ghost (Hacker)', subject:'I know where you were last Tuesday', body:"Don\'t panic. I wasn\'t following you. I was just... monitoring campus network traffic and your device was one of 847 active connections. You visited 12 sites. I only noted the last one because it was interesting.", effects:{ obsession:7, instability:4, intelligence:2 }, icon:'💻', category:'bf', bfRequired:'hacker' },
+  { from:'Ghost (Hacker)', subject:'I cleaned your digital footprint', body:"You had some archived posts from Year 1 that needed to not exist. They don\'t exist anymore. No need to thank me. Think of it as a gift. I tend to remove things I want to protect.", effects:{ scandal:-4, obsession:5, purity:3 }, icon:'💻', category:'bf', bfRequired:'hacker' },
+  { from:'Soren (Obsessive Romantic)', subject:'I\'ve been counting', body:"Days since we met: 47. Hours you\'ve occupied my thoughts this week: approximately 112 of 168. Percentage of the time I\'m completely rational about this: 0%. I don\'t find this alarming. I find it clarifying.", effects:{ obsession:8, instability:4, beauty:2 }, icon:'🖤', category:'bf', bfRequired:'yandere' },
+  { from:'Soren (Obsessive Romantic)', subject:'About that boy in your lecture', body:"I saw him lean over to show you something on his notes. I want you to understand something. I\'m not angry. I\'m just noting it. I note everything. You should know that about me.", effects:{ obsession:9, instability:6, scandal:2, purity:-3 }, icon:'⚠', category:'bf', bfRequired:'yandere' },
+  { from:'River (Campus Skater)', subject:'hey', body:"saw ur light on at 2am again. u good? made u a playlist. it\'s lo-fi but like the actual kind not the aesthetic kind. also your balcony plant needs water. i can see it from the bench.", effects:{ purity:3, popularity:2, instability:-2 }, icon:'🛹', category:'bf', bfRequired:'skater' },
+  { from:'Caspian (Psychology Student)', subject:'A professional observation', body:"I\'ve been analyzing your social positioning for a behavioral study. Anonymously. Obviously I noticed it was you immediately. For purely academic reasons, I find your behavioral patterns among the most sophisticated I\'ve observed. This is not a compliment. It\'s a finding.", effects:{ intelligence:3, obsession:3, instability:-1 }, icon:'🧠', category:'bf', bfRequired:'therapist_boy' },
+  { from:'Caspian (Psychology Student)', subject:'You\'re doing the thing again', body:"The deflection. The performance of confidence right before you\'re actually uncertain. I see it. I\'m not calling it out to embarrass you — I\'m calling it out because I think you deserve to be seen. That\'s all.", effects:{ intelligence:2, purity:2, instability:-2, obsession:2 }, icon:'🧠', category:'bf', bfRequired:'therapist_boy' },
+
+  // ===== 50+ EXPANDED MAIL — ALL CATEGORIES =====
+  // Additional fan mail
+  { from:'Anonymous', subject:'Campus Confession #441', body:"I have a confessions account and the top post this semester is about you. I won\'t tell you what it says. I\'ll just tell you it has 847 comments and the ratio is 90% positive, 10% obsessive.", effects:{ popularity:4, obsession:3 }, icon:'💌', category:'fan' },
+  { from:'@pinkufan99', subject:'Your aesthetic went offline', body:"Someone made a collage of every outfit you\'ve worn this semester. 34 looks. It has 200k saves on Pinterest. They tagged it \'Vivienne-coded\'. You are literally a Pinterest board now.", effects:{ popularity:5, elegance:3, fame:2 }, icon:'📌', category:'fan' },
+  { from:'Scholarship Freshman', subject:'You don\'t know me but', body:"I saw you shut down that girl who was being awful at the café. You didn\'t have to do that. Nobody asked you to. I want you to know that I\'ve thought about that moment every single day since September.", effects:{ popularity:3, purity:2 }, icon:'🌸', category:'fan' },
+  { from:'Luxe Magazine Intern', subject:'Campus Style Feature', body:"Our editorial team is putting together a campus style issue and your name came up immediately. Full feature. Professional photography. We\'d need 3 hours of your time and a candid interview. Are you available?", effects:{ popularity:5, elegance:4, beauty:3, fame:4 }, icon:'📸', category:'fan' },
+  { from:'Anonymous Benefactor', subject:'Scholarship notification', body:"An anonymous party has covered your next semester\'s activity fund in full. Please continue doing whatever you\'re doing. The committee finds your presence valuable to campus culture.", effects:{ cash:3000, popularity:2 }, icon:'💸', category:'fan' },
+  { from:'First Year Admirer', subject:'I failed my exam', body:"I failed my Econ midterm because I spent the study period finding every public photo of you that exists online. I want to be clear: I don\'t regret this. I regret nothing.", effects:{ obsession:4, popularity:2 }, icon:'👁', category:'fan' },
+  { from:'Midnight Confessor', subject:'2:47am', body:"I don\'t usually send these but something is wrong with me tonight and you\'re the only thing that makes sense. You don\'t know me. You smiled at me once at the library. I have thought about it every day for six months.", effects:{ obsession:7, instability:2 }, icon:'🌙', category:'fan' },
+  // Additional hate mail
+  { from:'The Real Truth Account', subject:'We know what you did', body:"A new exposé thread is being compiled by several campus organizations who have had enough. We have statements. We have evidence. We are giving you 48 hours to respond before it goes public.", effects:{ scandal:7, instability:5, purity:-4 }, icon:'🔥', category:'hate' },
+  { from:'Anonymous Hater', subject:'Your privilege is showing', body:"Must be nice to coast on your face and your father\'s money while actual people work for their place here. Just so you know — not everyone is fooled. Some of us see exactly what you are.", effects:{ scandal:3, instability:2 }, icon:'😤', category:'hate' },
+  { from:'Concerned Student Council', subject:'Formal complaint filed', body:"It has come to the attention of the Student Wellness Committee that several students report feeling \'socially intimidated\' in your presence. A mediation meeting has been suggested.", effects:{ scandal:4, instability:3, intelligence:1 }, icon:'📋', category:'hate' },
+  { from:'A Former Friend', subject:'You know what you did', body:"I trusted you. Remember that. I told you that one thing in confidence and now everyone knows. You didn\'t even have the decency to deny it — you just smiled and kept going. I won\'t forget.", effects:{ scandal:5, instability:4, purity:-3 }, icon:'💔', category:'hate' },
+  { from:'Campus Tabloid', subject:'Confirmed sources say', body:"We\'ve had three separate sources confirm the situation involving you and a person of interest. Story runs Monday unless we hear from your people. Does your inner circle have a statement?", effects:{ scandal:6, instability:4, fame:3 }, icon:'📰', category:'hate' },
+  { from:'ExBF Anonymous', subject:'Remember me?', body:"I\'m not trying to cause trouble. I just need you to know that I still have every text. Every voice note. Every photo from the lake house. This isn\'t a threat. It\'s a reminder that I exist.", effects:{ scandal:4, instability:5, obsession:3, purity:-2 }, icon:'💔', category:'hate' },
+  { from:'The Anti-Vivienne Coalition', subject:'Your reign is ending', body:"We are seventeen students who have organized specifically to document and counter your social influence. We have a spreadsheet. We have weekly meetings. You are the agenda.", effects:{ scandal:4, popularity:-2, instability:3, intelligence:2 }, icon:'⚔', category:'hate' },
+  // Blackmail
+  { from:'Unknown Sender', subject:'The video from Noir', body:"I have a copy of the footage from Noir Club, October 14th. You look incredible in it. The situation around you does not. A small transfer would ensure this stays private.", effects:{ cash:-1500, scandal:5, instability:6, purity:-3 }, icon:'⚠', category:'hate' },
+  { from:'Someone Who Knows', subject:'The real story about your grades', body:"Professor Hargrove mentioned in a private conversation that your grades in Year 1 required... external assistance. I\'m not making accusations. Just letting you know that some people know things.", effects:{ scandal:4, intelligence:-1, instability:4 }, icon:'📊', category:'hate' },
+  // Teacher/Dean notices
+  { from:'Dean Ashford', subject:'Mandatory meeting — this week', body:"Your name has appeared in three separate behavioral incident reports this semester. This is not yet a disciplinary matter. I am choosing to describe it as a conversation. My office, Thursday at 2pm.", effects:{ scandal:4, intelligence:2, instability:3 }, icon:'🎓', category:'general' },
+  { from:'Prof. Hartley', subject:'Academic progress concern', body:"I have been unable to determine whether your attendance issues this semester reflect personal difficulty or deliberate absence. In either case, I strongly suggest you meet with me before the midterm review.", effects:{ intelligence:2, instability:2 }, icon:'📚', category:'general' },
+  { from:'Campus Wellness Office', subject:'Check-in request', body:"Multiple students and one faculty member have expressed concern about your wellbeing this semester. This is strictly confidential. Please know that support is available and nothing you share leaves this office.", effects:{ purity:2, instability:-1, intelligence:1 }, icon:'💙', category:'general' },
+  // Rich family invitations
+  { from:'The Beaumont Family Secretary', subject:'A dinner invitation', body:"On behalf of Madame Beaumont, you are cordially invited to attend a private dinner at Château Beaumont this coming Saturday. Evening attire is required. A car will be sent.", effects:{ wealth:3, elegance:5, familyControl:4 }, icon:'🎩', category:'general' },
+  { from:'Hartcroft Holdings', subject:'Internship opportunity', body:"You have been recommended by two board members as a candidate for our exclusive summer fellowship. Compensation is considerable. The expectations are greater. We look forward to your consideration.", effects:{ wealth:6, intelligence:3, influence:5 }, icon:'💼', category:'general' },
+  // Sponsorship offers
+  { from:'Rosé & Ruin Brand Collab', subject:'Partnership proposal', body:"We\'ve been watching your aesthetic presence for three semesters. We believe an authentic collaboration would benefit both parties. $4,200 for three posts. Your content style, our product. No scripts.", effects:{ cash:4200, popularity:4, elegance:2 }, icon:'💅', category:'fan' },
+  { from:'Celestine Beauty PR', subject:'You + Us?', body:"Our team has identified you as the face of our new campus ambassador program. Complimentary product, a monthly stipend, and priority access to all launches. We think you\'d be perfect.", effects:{ cash:1800, beauty:3, popularity:3 }, icon:'💄', category:'fan' },
+  // Obsessive/stalker mail
+  { from:'00:00 Anonymous', subject:'I found your class schedule', body:"North Hall Monday/Wednesday/Friday. Studio Building Tuesday. The library is your third space. I like that you\'re predictable. It makes caring for you easier.", effects:{ obsession:9, instability:5, purity:-2 }, icon:'👁', category:'fan' },
+  { from:'The Devotee', subject:'A poem written in pink', body:"She wears herself like scripture. / Every gesture a hymn. / We are not worthy but we are here / standing at the edge of her kingdom. / I wrote nine drafts. This is the one that survived.", effects:{ obsession:7, cultSuspicion:3, popularity:1 }, icon:'🕯', category:'cult' },
+  { from:'Shrine Keeper', subject:'I needed you to know', body:"I have a space in my room. It\'s nothing extreme. Some photos from your public accounts, an object I found near the east garden, a candle that burns pink. It makes me feel close to something meaningful.", effects:{ obsession:8, instability:4, purity:-3 }, icon:'🕯', category:'cult' },
+  // Campus confessions
+  { from:'Pink U Confessions', subject:'Confession #782 — about you', body:"Anonymous user writes: \'She walked past me at the fountain and my entire identity restructured in real time. I changed my major three days later. I don\'t think this is a coincidence.\'", effects:{ popularity:3, influence:2, obsession:2 }, icon:'💬', category:'fan' },
+  { from:'Pink U Confessions', subject:'Confession #803 — hostile', body:"Anonymous user writes: \'I hate everything she represents and I follow her every move obsessively. These feelings coexist. I don\'t know what to do with either of them.\'", effects:{ popularity:2, scandal:2, obsession:3 }, icon:'💬', category:'hate' },
+  // Cult recruitment escalation
+  { from:'Circle High Command', subject:'The Ceremony approaches', body:"The next ritual is Week 8 — the Pale Moon gathering. Your presence is not optional. The inner circle has been preparing. The new devotees need to see you perform the blessing. This is not a request.", effects:{ obsession:6, cultSuspicion:7, influence:4, purity:-2 }, icon:'🌙', category:'cult' },
+  { from:'Deserter — M.', subject:'I\'m leaving the circle', body:"I know you\'ll hear about this from the others first. I want you to know that I still believe in you personally — it\'s the doctrine I can\'t sustain. What we\'re doing isn\'t healthy. I think you know that.", effects:{ obsession:-3, cultSuspicion:4, instability:3 }, icon:'🎀', category:'cult' },
+  // Gossip leaks
+  { from:'Campus Leak Network', subject:'Overheard at the Hartcroft dinner', body:"Three separate sources confirm that your name was mentioned — favorably — in a conversation between two board members and a visiting senator. Nobody knows why yet. That\'s the part that matters.", effects:{ influence:4, intelligence:2, popularity:3 }, icon:'🗣', category:'general' },
+  { from:'Gossip Feed', subject:'The rumor going around about your bf', body:"Everyone is saying he was spotted at the Elise party with someone else. I\'m not saying it\'s true. I\'m saying it\'s everywhere and people are watching your face for a reaction.", effects:{ scandal:4, instability:5, temptationThreats:1 }, icon:'👀', category:'hate' },
+  // Political letters
+  { from:'Senator Rhodes\' Office', subject:'A private request', body:"The Senator is aware of your connection to his son. He would like to discuss your... positioning within campus political circles. This is entirely informal. Discretion is appreciated.", effects:{ influence:6, intelligence:3, familyControl:8, instability:2 }, icon:'🏛', category:'political' },
+  { from:'Campus Political Alliance', subject:'We want you as a symbol', body:"Your face has more political currency than any candidate we\'ve fielded in years. We\'re not asking you to run. We\'re asking you to attend three events and be seen with the right people. That\'s it.", effects:{ influence:7, popularity:4, instability:2, purity:-2 }, icon:'🏛', category:'political' },
+  // Post-marriage bf letters
+  { from:'Edward (Your Husband)', subject:'About your behavior last evening', body:"I received a call from Countess Brach this morning regarding your comments at the Whitmore dinner. I require a more controlled performance from you in social settings. We will discuss this.", effects:{ instability:5, familyControl:5, elegance:2 }, icon:'🎩', category:'bf', bfRequired:'old_money_married' },
+  { from:'Sebastian (Your Husband)', subject:'Press release draft', body:"My communications team has prepared a statement about your public appearances. Please review and sign. Our image as a couple is an asset that requires management. I trust you understand the strategic value.", effects:{ influence:4, popularity:3, instability:3 }, icon:'🏛', category:'bf', bfRequired:'politician_married' },
+  // Weird internet users
+  { from:'forum user 𝒗𝒊𝒗𝒊𝒆𝒏𝒏𝒆𝒄𝒐𝒅𝒆𝒅', subject:'Your dedicated wiki page', body:"I have been maintaining a comprehensive wiki about your public appearances, known associates, and behavioral patterns since March. It has 847 edits. Would you like to review it for accuracy?", effects:{ obsession:8, popularity:3, instability:3 }, icon:'🌐', category:'fan' },
+  { from:'Anonymous Forum Post', subject:'The Vivienne Thread', body:"I found a 400-post forum thread analyzing your social strategies as if they were chess moves. The consensus is that you\'re operating several levels above everyone else on campus. Some of them are scared. Most are impressed.", effects:{ intelligence:2, popularity:4, obsession:4 }, icon:'🌐', category:'fan' },
+  // Breakup texts / ex drama
+  { from:'Your Ex', subject:'Don\'t respond to this', body:"I told myself I wasn\'t going to send this. I\'m sending it anyway. I miss you in a way that makes me feel stupid. I know that\'s not your problem. I just needed someone to know.", effects:{ instability:3, obsession:3, purity:1 }, icon:'💔', category:'general' },
+  { from:'His New Girlfriend', subject:'We need to talk', body:"I know you\'re not with him anymore. I know that. I\'m asking you to stay out of his life anyway. He mentions you in his sleep. This is a problem that starts with you existing near him.", effects:{ scandal:3, instability:4, popularity:2 }, icon:'🔪', category:'hate' },
+  // Fake apology / cheating accusations
+  { from:'Zack (Basketball Captain)', subject:'Okay look', body:"I know you heard. I\'m not going to pretend I didn\'t do it. But you also know what we had was real and one mistake doesn\'t erase real. I just need you to remember that before you do something permanent.", effects:{ scandal:3, instability:5, purity:-2 }, icon:'🏀', category:'bf', bfRequired:'athlete' },
+  { from:'Unknown', subject:'Cheating accusation against your bf', body:"I saw him. I have the photo. I\'m not sharing it publicly — I\'m sending it to you because I think you deserve to know before everyone else does. What you do with it is entirely up to you.", effects:{ scandal:4, instability:6, purity:-2 }, icon:'📱', category:'hate' },
 ];
 
 /* ============================================================
@@ -2086,6 +2167,17 @@ const BOYFRIENDS = [
   { id:'idol', name:'Jay Seo', type:'Idol Trainee', icon:'🎤', desc:'Beautiful, famous, jealousy magnet', bonus:'popularity +6, scandal +3', effects:{ popularity:6, scandal:3, obsession:4 } },
   { id:'politician', name:'William Rhodes', type:'Political Son', icon:'🏛', desc:'Ambitious, calculating, useful', bonus:'influence +4', effects:{ influence:4, intelligence:2, familyControl:-5 } },
   { id:'genius', name:'Bastian Voss', type:'Cold Genius', icon:'❄', desc:'Aloof, brilliant, secretly devoted', bonus:'intelligence +4, elegance +2', effects:{ intelligence:4, elegance:2 } },
+  // ===== 10 NEW BOYS =====
+  { id:'f1driver', name:'Nico Renault', type:'F1 Driver', icon:'🏎', desc:'Adrenaline junkie, gorgeous, always leaving', bonus:'wealth +3, popularity +3, scandal +2/wk', effects:{ wealth:3, popularity:3, scandal:2, instability:2 } },
+  { id:'medstudent', name:'Eli Park', type:'Sleep-Deprived Med Student', icon:'🩺', desc:'Exhausted, brilliant, kind, tragically unavailable', bonus:'intelligence +5, purity +2/wk', effects:{ intelligence:5, purity:2 } },
+  { id:'eboy', name:'Kai Lux', type:'E-Boy Streamer', icon:'🎮', desc:'Online famous, parasocial king, surprisingly soft IRL', bonus:'popularity +5, obsession +3/wk', effects:{ popularity:5, obsession:3, scandal:1 } },
+  { id:'churchboy', name:'Ethan Grace', type:'Church Golden Boy', icon:'✝', desc:'Pure, adored by parents, hiding something devastating', bonus:'purity +4, elegance +2/wk', effects:{ purity:4, elegance:2, instability:1 } },
+  { id:'exchange', name:'Riku Tanaka', type:'Exchange Student', icon:'🌸', desc:'Foreign, mysterious, everything is a miscommunication', bonus:'beauty +3, influence +2/wk', effects:{ beauty:3, influence:2, obsession:2 } },
+  { id:'nepobaby', name:'Florian Saint-Claire', type:'Nepo Baby Fashion Boy', icon:'🕶', desc:'Effortlessly connected, designer everything, casually devastating', bonus:'elegance +4, wealth +3/wk', effects:{ elegance:4, wealth:3, purity:-2 } },
+  { id:'hacker', name:'Ghost', type:'Hacker Boy', icon:'💻', desc:'No one knows his real name. Terrifyingly capable. Possibly in love with you.', bonus:'intelligence +4, scandal +3/wk', effects:{ intelligence:4, scandal:3, obsession:4 } },
+  { id:'yandere', name:'Soren Vael', type:'Obsessive Romantic', icon:'🖤', desc:'Perfect on the surface. Unhinged underneath. He keeps a journal about you.', bonus:'obsession +6, beauty +2/wk', effects:{ obsession:6, beauty:2, instability:4, purity:-3 } },
+  { id:'skater', name:'River Knox', type:'Campus Skater', icon:'🛹', desc:'Doesn\'t care about any of this. That\'s the problem. You care that he doesn\'t care.', bonus:'popularity +2, purity +3, instability -2/wk', effects:{ popularity:2, purity:3, instability:-2 } },
+  { id:'therapist_boy', name:'Caspian Moore', type:'Psychology Student', icon:'🧠', desc:'Analyzes you constantly. Annoyingly perceptive. Possibly more dangerous than the mafia one.', bonus:'intelligence +3, instability -3/wk', effects:{ intelligence:3, instability:-3, obsession:2 } },
 ];
 
 /* ============================================================
@@ -2215,6 +2307,77 @@ const CAMPUS_EVENTS = [
       { label:'Deny publicly with tears', effects:{ purity:4, popularity:4, instability:4 } },
       { label:'Leak a bigger story to distract', effects:{ influence:5, purity:-6, scandal:3 } },
     ]},
+  // ===== 10 NEW FATE EVENTS =====
+  { icon:'🌑', title:'CAMPUS BLACKOUT',
+    body:"All power on campus cuts out at 11pm. No phones, no cameras. In the darkness, three separate things happen that will define your semester. Which do you address first?",
+    choices:[
+      { label:'Find your boyfriend — it\'s complicated', effects:{ obsession:5, instability:4, purity:-2 } },
+      { label:'Host an impromptu gathering — build myth', effects:{ popularity:8, influence:5, cultSuspicion:3 } },
+      { label:'Move through campus unseen — gather intel', effects:{ intelligence:6, influence:4, purity:-3, scandal:2 } },
+    ]},
+  { icon:'👗', title:'FASHION SHOW DISASTER',
+    body:"The annual charity fashion show implodes — a model faints, the headliner drops out, and the organizer has a breakdown in front of 300 guests. All eyes turn to you.",
+    choices:[
+      { label:'Step in as headliner — command the room', effects:{ popularity:10, beauty:5, elegance:6, cash:1000 } },
+      { label:'Take the organizer under your wing publicly', effects:{ influence:6, purity:4, popularity:4 } },
+      { label:'Document the chaos and post later', effects:{ popularity:5, scandal:4, purity:-3, fame:5 } },
+    ]},
+  { icon:'🔥', title:'IDOL SCANDAL — HE\'S TRENDING',
+    body:"Your boyfriend's name is trending nationally. The context is not good. A video has surfaced. Everyone on campus is watching you for a reaction.",
+    choices:[
+      { label:'Release a dignified silence statement', effects:{ elegance:6, purity:3, instability:4, popularity:2 } },
+      { label:'Dump him publicly — reclaim the narrative', effects:{ popularity:8, purity:-4, scandal:5, influence:4 } },
+      { label:'Defend him — go full ride-or-die', effects:{ obsession:5, instability:6, scandal:6, popularity:3 } },
+    ]},
+  { icon:'🌹', title:'SECRET SOCIETY INVITATION',
+    body:"An unmarked envelope arrives with a wax seal. You are invited to join The Amaranth — a 60-year-old exclusive campus society. Initiation is this Saturday. Attendance means surrendering one secret.",
+    choices:[
+      { label:'Attend — what\'s one secret?', effects:{ influence:10, intelligence:5, cultSuspicion:6, purity:-5 } },
+      { label:'Investigate before committing', effects:{ intelligence:6, influence:3, instability:2 } },
+      { label:'Decline and keep the invitation as leverage', effects:{ intelligence:4, influence:5, purity:2 } },
+    ]},
+  { icon:'🎭', title:'ROOFTOP CONFESSION — LIVESTREAMED',
+    body:"Someone is livestreaming from the dorm rooftop confessing their love for you. 12,000 viewers. It's borderline beautiful. It's also a disaster. Campus is watching.",
+    choices:[
+      { label:'Go to the rooftop — address it directly', effects:{ popularity:8, obsession:5, instability:4, fame:6 } },
+      { label:'Send a representative to de-escalate', effects:{ influence:4, elegance:3, instability:2, obsession:3 } },
+      { label:'Post a response video from your room', effects:{ popularity:6, fame:7, scandal:3, purity:-2 } },
+    ]},
+  { icon:'💀', title:'UNDERGROUND CASINO NIGHT',
+    body:"You receive an invitation to an underground gambling event at a private estate. Attendance is anonymous — except everyone there knows exactly who everyone else is. High risk. Higher reward.",
+    choices:[
+      { label:'Play — and win spectacularly', effects:{ wealth:8, popularity:6, scandal:5, instability:3 } },
+      { label:'Attend but don\'t play — gather information', effects:{ intelligence:8, influence:5, scandal:3 } },
+      { label:'Decline but use knowledge of it as leverage', effects:{ influence:6, intelligence:4, scandal:2, purity:2 } },
+    ]},
+  { icon:'👁', title:'OBSESSIVE KIDNAPPING ATTEMPT',
+    body:"An obsessive admirer has left notes escalating over three weeks. Campus security informs you they\'ve been found in your building — twice. How do you handle this before the administration does?",
+    choices:[
+      { label:'File formal complaint — official protection', effects:{ purity:5, instability:-3, popularity:2, scandal:3 } },
+      { label:'Confront them privately — control the narrative', effects:{ influence:6, instability:5, obsession:3, purity:-3 } },
+      { label:'Have your bodyguard handle it silently', effects:{ instability:-2, purity:3, cash:-500, scandal:1 } },
+    ]},
+  { icon:'🎪', title:'CHARITY GALA — SOCIAL MINEFIELD',
+    body:"The annual charity gala seats you next to the Dean, two rival queens, your ex, and a senator\'s aide. Every interaction will be analyzed, photographed, and discussed for months.",
+    choices:[
+      { label:'Work the room — maximize every contact', effects:{ influence:8, elegance:6, popularity:5, instability:3 } },
+      { label:'Perform perfect grace for one target only', effects:{ elegance:8, intelligence:4, purity:3 } },
+      { label:'Create a scene — become the event', effects:{ popularity:10, scandal:7, fame:8, purity:-6 } },
+    ]},
+  { icon:'📱', title:'FAKE DATING CONTRACT PROPOSAL',
+    body:"A famous campus figure (athlete, politician\'s son, idol trainee) propositions you: fake date for 6 weeks for mutual PR benefit. $5,000. Ironclad NDA. No feelings. He says.",
+    choices:[
+      { label:'Accept — treat it like a business deal', effects:{ cash:5000, popularity:6, purity:-4, instability:3 } },
+      { label:'Negotiate better terms first', effects:{ intelligence:5, wealth:3, influence:4 } },
+      { label:'Reject but leak the offer discreetly', effects:{ influence:4, popularity:3, scandal:3, purity:2 } },
+    ]},
+  { icon:'🌙', title:'MASKED BALL — NO NAMES',
+    body:"An invitation to a masked ball: no names, no affiliations. Just masks. You arrive and realize you know at least four people here. One of them shouldn\'t be here at all.",
+    choices:[
+      { label:'Approach the person who shouldn\'t be here', effects:{ intelligence:6, instability:4, scandal:4, influence:5 } },
+      { label:'Stay masked — observe everything', effects:{ intelligence:8, influence:6, obsession:3 } },
+      { label:'Remove your mask — let them find you', effects:{ popularity:7, elegance:5, fame:5, purity:-2 } },
+    ]},
 ];
 
 /* ============================================================
@@ -2308,6 +2471,27 @@ const SOCIAL_POSTS = [
   { type:'hate', user:'@actualfeminism', text:'vivienne-coded girlies rise AND think critically about what you\'re aligning with. please.', statReq:{ scandal:40 }, likesBase:1800 },
   { type:'neutral', user:'@campuslife_official', text:'campus beauty rankings are in. we are not publishing them but we will say the conversation is... ongoing.', statReq:{}, likesBase:9100 },
   { type:'neutral', user:'@freshmanadvice', text:'tip: do not make eye contact with her until year 2. you\'re not ready. i wasn\'t ready.', statReq:{ popularity:50 }, likesBase:4400 },
+  // ===== 20 NEW SOCIAL POSTS =====
+  { type:'gossip', user:'@pinkufeed', text:'campus confession: "i built my entire personality around her aesthetic and i have zero regrets"', statReq:{ popularity:55 }, likesBase:5100 },
+  { type:'gossip', user:'@anonpinku', text:'the way the whole cafeteria went quiet when she walked in. girl entered like a main character cutscene', statReq:{ popularity:65 }, likesBase:6800 },
+  { type:'gossip', user:'@spotted_oncampus', text:'SPOTTED: her leaving the dean\'s office at 8pm on a tuesday. nobody knows why. i need answers.', statReq:{ influence:60 }, likesBase:4200 },
+  { type:'gossip', user:'@whispernetwork', text:'three girls have been seen copying her schedule. not her aesthetic. her actual daily schedule. this is escalating.', statReq:{ obsession:35 }, likesBase:7300 },
+  { type:'scandal', user:'@pinkurumors', text:'i\'m not saying it happened but i\'m not NOT saying it happened. the mafia heir situation. u know.', statReq:{ scandal:40, bf:true }, likesBase:9200 },
+  { type:'scandal', user:'@realtalkcampus', text:'multiple sources say she was seen leaving the underground casino event at 4am. FOUR. AM.', statReq:{ scandal:30 }, likesBase:5500 },
+  { type:'scandal', user:'@anonpinku', text:'so we\'re just not going to address the shrine situation? multiple sources. it\'s real.', statReq:{ obsession:50 }, likesBase:8100 },
+  { type:'influencer', user:'@viviennecore', text:'reminder that she has never posted a gym selfie. she simply looks like this. naturally. god is real and she is proof.', statReq:{ beauty:70 }, likesBase:12000 },
+  { type:'influencer', user:'@pinkupower', text:'the aesthetic is called old money but she invented a new subcategory called scary money and it\'s a different vibe entirely', statReq:{ wealth:65, elegance:65 }, likesBase:8400 },
+  { type:'stan', user:'@devoteeclub', text:'she looked at me for 0.4 seconds and i restructured my entire belief system. no notes.', statReq:{ beauty:65, popularity:60 }, likesBase:6600 },
+  { type:'stan', user:'@pinkucult_real', text:'it\'s not a cult. it\'s a community of like-minded individuals who happen to coordinate in pink on tuesdays.', statReq:{ followers:4 }, likesBase:5900 },
+  { type:'meme', user:'@campusmemes', text:'[photo of empty chair in lecture] "she sat here once. it has not been the same since."', statReq:{ popularity:60 }, likesBase:14000 },
+  { type:'meme', user:'@pinkuhumor', text:'everyone at this school is either dating her, hating her, copying her, or writing a thesis about her. there is no other category.', statReq:{ popularity:70 }, likesBase:18000 },
+  { type:'breakup', user:'@campusgossip', text:'DEVELOPING: the couple brand everyone was obsessed with may be over. no confirmation yet. multiple sources saying it was ugly.', statReq:{ scandal:35, bf:true }, likesBase:9900 },
+  { type:'party', user:'@pinkufeed', text:'whoever organized the party at the east estate: we need to talk. also: she was there. that explains everything.', statReq:{ popularity:55 }, likesBase:6200 },
+  { type:'richgirl', user:'@luxcampus', text:'her outfit today cost more than a semester of tuition. i did the math. i\'m not even mad.', statReq:{ wealth:70, elegance:65 }, likesBase:7700 },
+  { type:'richgirl', user:'@campuslux', text:'she brought her stylist to a STUDY GROUP. the audacity. the elegance. the effectiveness.', statReq:{ wealth:60 }, likesBase:5400 },
+  { type:'weird', user:'@truethings', text:'i write letters to her. i\'ve never sent any of them. i have 47. this is fine.', statReq:{ obsession:40 }, likesBase:4300 },
+  { type:'political', user:'@studentnews', text:'three separate political offices have been linked to her social media presence this month. she hasn\'t endorsed anyone. she doesn\'t need to.', statReq:{ influence:70 }, likesBase:3800 },
+  { type:'meta', user:'@campusannals', text:'five years from now someone is going to write a paper about her. four of my friends are already taking notes.', statReq:{ popularity:75, influence:65 }, likesBase:8800 },
 ];
 
 /* ============================================================
@@ -5938,6 +6122,34 @@ const NIGHT_EVENTS = [
   { id:'emotional_breakdown', label:'😭 Cry Alone on the Roof', desc:'Sometimes the empire gets heavy. You feel human.', effects:{ instability:-6, authenticity:5, purity:4, beauty:-2 }, cost:0, minInstability:40 },
   { id:'mafia_meeting', label:'🖤 Mafia Connection', desc:'Dangerous networking. Life-changing access.', effects:{ influence:8, scandal:8, fame:6, purity:-8, instability:4 }, cost:0, minYear:2 },
   { id:'underground_race', label:'🏎 Underground Race Night', desc:'Adrenaline. Speed. Chaos.', effects:{ popularity:6, scandal:6, instability:5, fame:5, authenticity:-4 }, cost:0, minYear:2 },
+  // ===== 20 NEW NIGHT EVENTS =====
+  // Common
+  { id:'midnight_study', label:'📚 Midnight Library Session', desc:'Just you, silence, and uncomfortable clarity.', effects:{ intelligence:5, purity:3, instability:-2 }, cost:0 },
+  { id:'skincare_ritual', label:'🧴 Elaborate Skincare Ritual', desc:'An hour of maintenance. Worth every minute.', effects:{ beauty:4, purity:2, instability:-3 }, cost:0 },
+  { id:'gossip_session', label:'🍵 Late Night Gossip', desc:'Tea gets spilled. Things you learn will cost you.', effects:{ intelligence:4, scandal:2, influence:3, purity:-2 }, cost:0 },
+  { id:'balcony_wine', label:'🍷 Balcony Wine Alone', desc:'The campus sleeps. You watch and feel powerful.', effects:{ elegance:3, instability:-2, obsession:2 }, cost:0 },
+  { id:'diary_entry', label:'📓 Secret Diary Entry', desc:'You write what you can\'t say. It helps more than it should.', effects:{ instability:-4, authenticity:4, purity:2 }, cost:0 },
+  // Rare
+  { id:'stalker_encounter', label:'⚠ Someone Outside Your Window', desc:'They leave before you can get a clear look. Your hands shake.', effects:{ obsession:6, instability:6, paranoia:4, purity:-2 }, cost:0, minObsession:30 },
+  { id:'mysterious_invite', label:'🕯 Unmarked Note Under Your Door', desc:'Coordinates. No name. Your instincts say go. Your mind says don\'t.', effects:{ influence:5, cultSuspicion:5, instability:4, intelligence:3 }, cost:0, minYear:2 },
+  { id:'rival_ambush', label:'🔪 Confrontation in the Hallway', desc:'She was waiting. She had things to say. So did you.', effects:{ popularity:4, scandal:5, influence:3, instability:4, purity:-3 }, cost:0 },
+  { id:'secret_phone_call', label:'📞 3AM Phone Call from Him', desc:'His voice at 3am is a different category of problem.', effects:{ obsession:5, instability:3, purity:-2, popularity:2 }, cost:0, minBf:true },
+  { id:'rooftop_alone', label:'🌙 Rooftop at Midnight', desc:'The city below. You above. Everything feels possible. Then it doesn\'t.', effects:{ instability:3, authenticity:4, beauty:2, purity:2 }, cost:0 },
+  // Rare — dangerous
+  { id:'blackmail_delivery', label:'📬 Blackmail Letter Delivered', desc:'No return address. Very specific. Very accurate. You have 72 hours.', effects:{ scandal:6, instability:6, cash:-2000, purity:-3 }, cost:0, minScandal:25 },
+  { id:'infiltrate_rival_gathering', label:'🎭 Infiltrate Rival\'s Meeting', desc:'You wear a mask. You learn things. You cannot unhear them.', effects:{ intelligence:7, influence:5, scandal:4, purity:-4 }, cost:0 },
+  { id:'piano_room', label:'🎹 Empty Practice Room at 2AM', desc:'You play. No audience. Somehow this is the most powerful you\'ve felt all week.', effects:{ authenticity:5, beauty:3, instability:-4, purity:3 }, cost:0 },
+  { id:'fashion_emergency', label:'💃 Emergency Outfit for Tomorrow', desc:'Three hours. Four looks. A decision that will define the morning.', effects:{ elegance:5, beauty:3, cash:-600, instability:2 }, cost:600, minCash:600 },
+  // Ultra rare / creepy
+  { id:'shrine_discovered', label:'🕯 You Find the Shrine', desc:'Someone on campus has dedicated a corner of their room to you. Photos. Notes. Objects you didn\'t know were missing.', effects:{ obsession:10, instability:7, paranoia:5, purity:-4 }, cost:0, minObsession:50, rare:true },
+  { id:'anonymous_package', label:'📦 Package — No Sender', desc:'Inside: one of your old photos, a pressed flower, and a handwritten note that knows things about you that aren\'t public. Hands shaking.', effects:{ obsession:9, instability:8, paranoia:6 }, cost:0, rare:true },
+  { id:'3am_confession', label:'💬 Anonymous 3AM Confession to You', desc:'A message arrives from an unknown account: "I\'ve been planning something for you for six months. Don\'t be scared. It\'s a gift." You don\'t sleep.', effects:{ obsession:8, instability:9, paranoia:5, fame:3 }, cost:0, rare:true },
+  // Romance-specific
+  { id:'sneak_out', label:'🌃 Sneak Out to See Him', desc:'Against all better judgment. Worth it. Maybe.', effects:{ obsession:6, popularity:3, instability:4, purity:-4, scandal:2 }, cost:0, minBf:true },
+  { id:'fight_and_makeup', label:'💔 A Fight. Then More.', desc:'It starts as an argument. Then something shifts. Neither of you speaks about it the next morning.', effects:{ obsession:7, instability:5, purity:-3, beauty:2 }, cost:0, minBf:true },
+  // Paranoia events
+  { id:'followed_home', label:'👣 Someone Followed You Home', desc:'You noticed halfway across campus. You walked faster. They matched your pace. You made it inside. Barely.', effects:{ paranoia:8, instability:6, obsession:4 }, cost:0, minPopularity:60 },
+  { id:'impersonator', label:'🪞 Someone Is Pretending to Be You', desc:'A fake account. Your photos. Your aesthetic. Your name, slightly changed. It already has 2,000 followers.', effects:{ obsession:6, instability:4, scandal:3, popularity:3 }, cost:0, rare:true },
 ];
 
 function nightEventAvailable(ev) {
@@ -5948,6 +6160,10 @@ function nightEventAvailable(ev) {
   if (ev.minIntelligence && G.stats.intelligence < ev.minIntelligence) return false;
   if (ev.minInstability && G.hidden.instability < ev.minInstability) return false;
   if (ev.minYear && G.year < ev.minYear) return false;
+  if (ev.minObsession && (G.hidden.obsession||0) < ev.minObsession) return false;
+  if (ev.minScandal && (G.hidden.scandal||0) < ev.minScandal) return false;
+  if (ev.minPopularity && G.stats.popularity < ev.minPopularity) return false;
+  if (ev.rare && Math.random() > 0.25) return false; // rare events only surface 25% of checks
   return true;
 }
 
